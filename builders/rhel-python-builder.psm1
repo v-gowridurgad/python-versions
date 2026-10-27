@@ -80,7 +80,9 @@ class RhelPythonBuilder : NixPythonBuilder {
             "gdbm-devel",
             "xz-devel",
             "libffi-devel",
-            "tk-devel"
+            "tk-devel",
+            "libmpdec-dev"
+            
         ) | ForEach-Object {
             Execute-Command -Command "sudo dnf install -y $_"
         }
